@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-12">
-          <h2 class="display-3 fw-bold mb-4">Холбоо барих</h2>
+          <h2 class="display-3 fw-bold mb-4">{{ __('menu.contact') }}</h2>
           <div class="row">
             <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 d-flex gap-3">
               <p class="lead m-0">—</p>
@@ -92,7 +92,7 @@
                   <div>
                     <h4 class="mb-2">{{ __('page.address') }}</h4>
                     <hr class="w-50 mb-3 border-dark-subtle">
-                    <address class="m-0 text-secondary">3-14-7-301 Aratacho Kobe Shi Hyogo Ku Hyogo Ken 652-0032 Japan
+                    <address class="m-0 text-secondary">{{ __('page.company_address') }}
                     </address>
                   </div>
                 </div>

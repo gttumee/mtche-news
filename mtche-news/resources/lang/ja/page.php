@@ -11,4 +11,6 @@ return [
     'messege' => 'メッセージ入力',
     'send' => '送信',
     'address' => '住所',
+    'company_address' => '兵庫県神戸市兵庫区荒田町3丁目14-7-301',
+    
 ];

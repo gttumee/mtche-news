@@ -12,4 +12,5 @@ return [
     'messege' => 'Санал хүсэлт',
     'send' => 'Илгээх',
     'address' => 'Хаяг',
+    'company_address' => '3-14-7-301 Aratacho Kobe Shi Hyogo Ku Hyogo Ken 652-0032 Japan',
 ];

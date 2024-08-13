@@ -17,6 +17,6 @@ class HighlightCategory extends Model
 
     public function highlight()
     {
-        return $this->belongsTo(Highlight::class, 'category_id');
+        return $this->hasMany(Highlight::class, 'category_id');
     }
 }
