@@ -21,7 +21,7 @@ class ArticleResource extends Resource
 {
     protected static ?string $model = Article::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-s-book-open';
     protected static ?string $navigationLabel = 'Нийтлэл';
     protected static ?int $navigationSort = 2;
 
@@ -67,7 +67,7 @@ class ArticleResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('ArticleCategory.name')
+                Tables\Columns\TextColumn::make('articleCategory.name')
                     ->searchable()
                     ->label('Төрөл'),
                 Tables\Columns\TextColumn::make('title_mn')

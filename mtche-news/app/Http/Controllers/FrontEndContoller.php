@@ -8,6 +8,8 @@ use App\Models\Highlight;
 use App\Models\HighlightCategory;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\App;
+use Illuminate\Http\Request;
+
 
 class FrontEndContoller extends Controller
 {
@@ -30,7 +32,10 @@ class FrontEndContoller extends Controller
     public function index()
     {
         $lang = App::getLocale();
-        $article = Article::with('articleCategory')->get();
+        $article = Article::with('articleCategory')
+        ->orderBy('created_at', 'desc')
+        ->get();
+
         $highlight = Highlight::with('highligthCategory')->first();
         return view('index', compact('lang','article','highlight'));
     }
@@ -48,9 +53,12 @@ class FrontEndContoller extends Controller
         return view('news', compact('lang','article','highlight'));
     }     
 
-    public function page(){
+    public function page(Request $request){
+        $id = $request->query('id');
         $lang = App::getLocale();
-        $article = Article::all();
+        $article = Article::where('category_id', $id)
+        ->orderBy('created_at', 'asc')
+        ->get();
         $highlight = Highlight::all();
         return view('page', compact('lang','article','highlight'));
     }

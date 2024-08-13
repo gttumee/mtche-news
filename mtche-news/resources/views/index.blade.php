@@ -140,16 +140,14 @@
               <div class="card-body m-0 p-0">
                 <div class="entry-header mb-3">
                   <ul class="entry-meta list-unstyled d-flex mb-3">
-                    <li>
-                      @foreach ($item->articleCategory as $category)
+                    <li>           
                       @if ($lang =='mn')
                       <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                      href="#!">{{$category->name}}</a>  
+                      href="#!">{{$item->articleCategory->name}}</a>  
                       @else
                       <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                      href="#!">{{$category->japanese}}</a> 
+                      href="#!">{{$item->articleCategory->japanese}}</a> 
                       @endif
-                      @endforeach
                     </li>
                   </ul>
                   <h2 class="card-title entry-title h4 m-0">

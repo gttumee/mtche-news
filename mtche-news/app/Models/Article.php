@@ -20,6 +20,6 @@ class Article extends Model
 
     public function articleCategory()
     {
-        return $this->hasMany(ArticleCategory::class, 'id');
+        return $this->belongsTo(ArticleCategory::class, 'category_id');
     }
 }

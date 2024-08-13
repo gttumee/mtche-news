@@ -17,7 +17,7 @@ class HighlightResource extends Resource
 {
     protected static ?string $model = Highlight::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-c-fire';
     protected static ?string $navigationLabel = 'Онцлох Нийтлэл';
     protected static ?int $navigationSort = 4;
 

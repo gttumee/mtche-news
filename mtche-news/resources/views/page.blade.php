@@ -7,11 +7,29 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-12">
-          <h2 class="display-3 fw-bold mb-4">Хүний хөгжил</h2>
+          @if (isset($article[0]) && $article[0]->articleCategory)
+          @if ($lang == 'mn')
+              <h2 class="display-3 fw-bold mb-4">{{ $article[0]->articleCategory->name }}</h2>
+          @else
+              <h2 class="display-3 fw-bold mb-4">{{ $article[0]->articleCategory->japanese }}</h2>
+          @endif
+      @else
+          <h2 class="display-3 fw-bold mb-4">Category not available</h2>
+      @endif
+      
           <div class="row">
             <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 d-flex gap-3">
               <p class="lead m-0">—</p>
-              <p class="lead text-secondary m-0">Энэхүү булангаар хүний хөгжлийн талаар дэлгэрэнгүй</p>
+              @if (isset($article[0]) && $article[0]->articleCategory)
+              @if ($lang == 'mn')
+                  <p class="lead text-secondary m-0">Энэхүү булангаар хүний {{$article[0]->articleCategory->name}} талаар дэлгэрэнгүй тайлбарлах</p>
+              @else
+                  <p class="lead text-secondary m-0">本件については{{$article[0]->articleCategory->japanese}}詳しく説明します。</p>
+              @endif
+          @else
+              <p class="lead text-secondary m-0">Category information not available.</p>
+          @endif
+          
             </div>
           </div>
         </div>
@@ -55,15 +73,13 @@
                   <div class="entry-header mb-3">
                     <ul class="entry-meta list-unstyled d-flex mb-3">
                       <li>
-                        @foreach ($item->articleCategory as $category)
                         @if ($lang =='mn')
                         <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                        href="#!">{{$category->name}}</a>  
+                        href="#!">{{$item->articleCategory->name}}</a>  
                         @else
                         <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                        href="#!">{{$category->japanese}}</a> 
+                        href="#!">{{$item->articleCategory->japanese}}</a>  
                         @endif
-                        @endforeach
                       </li>
                     </ul>
                     <h2 class="card-title entry-title h4 m-0">
