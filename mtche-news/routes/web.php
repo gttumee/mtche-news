@@ -26,7 +26,12 @@ Route::controller(FrontEndContoller::class)->group(function () {
     Route::get('/', 'index')->name('index');
     Route::get('/about', 'about')->name('about');
     Route::get('/news', 'news')->name('news');
-    Route::get('/page/{id}', 'page')->name('page');
-    Route::get('/common', 'common')->name('common');
+    Route::get('/page', 'page')->name('page');
+    Route::get('/article', 'article')->name('article');
     Route::get('/contact', 'contact')->name('contact');
+    Route::post('/comment', 'comment')->name('comment');
+    Route::get('/comment', 'comment')->name('comment');
+    Route::get('/request', 'artocleRequest')->name('request');
+
+
 });

@@ -10,6 +10,7 @@
   <title>MTCHE нийтлэл</title>
   <meta name="description" content="MTCHE нийтлэл">
   <meta name="author" content="BootstrapBrain">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <!-- Favicon and Touch Icons -->
   <link rel="icon" type="image/png" sizes="512x512" href="./assets/favicon/favicon-512x512.png">
@@ -29,6 +30,31 @@
 <body>
     @include('parts.header')
     @yield('content')
+    <section class="py-3 py-md-5 py-xl-10 bsb-section-py-xxl-1 bg-accent">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-9 col-lg-8 col-xl-8 col-xxl-7">
+            <h2 class="display-5 fw-bold mb-4 mb-md-5 mb-xxl-6 text-center text-accent-emphasis">{{ __('menu.mail_get') }}
+            </h2>
+        </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
+            <form class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
+              <div class="col-12 col-lg-8">
+                <label for="email-newsletter-component" class="visually-hidden">{{ __('page.email') }}</label>
+                <input type="email" class="form-control bsb-form-control-3xl" id="email-newsletter-component" value=""
+                  placeholder="{{ __('page.email') }}" aria-label="email-newsletter-component" aria-describedby="email-newsletter-help"
+                  required>
+              </div>
+              <div class="col-12 col-lg-3 text-center text-lg-start">
+                <button type="submit" class="btn btn-primary bsb-btn-3xl">{{ __('menu.mail_register') }}</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     @include('parts.footer')
   <!-- Javascript Files: Vendors -->
   <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

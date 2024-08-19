@@ -58,38 +58,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Newsletter 1 - Bootstrap Brain Component -->
-    <!-- Newsletter 1 - Bootstrap Brain Component -->
-    <section class="py-3 py-md-5 py-xl-10 bsb-section-py-xxl-1 bg-accent">
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-12 col-md-9 col-lg-8 col-xl-8 col-xxl-7">
-            <h2 class="display-4 fw-bold mb-4 mb-md-5 mb-xxl-6 text-center text-accent-emphasis">Манай мэдээг өөрийн
-              и-мэйл хаягаар авахыг хүсвэл
-              и-мэйл хаягаа бүртгүүлэнэ үү
-            </h2>
-          </div>
-        </div>
-        <div class="row justify-content-md-center">
-          <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
-            <form class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
-              <div class="col-12 col-lg-8">
-                <label for="email-newsletter-component" class="visually-hidden">и-мэйл хаяг</label>
-                <input type="email" class="form-control bsb-form-control-3xl" id="email-newsletter-component" value=""
-                  placeholder="И-мэйл" aria-label="email-newsletter-component" aria-describedby="email-newsletter-help"
-                  required>
-                <div id="email-newsletter-help" class="form-text text-center text-lg-start">Шинэ мэдээ мэдээлэл.</div>
-              </div>
-              <div class="col-12 col-lg-3 text-center text-lg-start">
-                <button type="submit" class="btn btn-primary bsb-btn-3xl">Бүртгүүлэх</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
 @endsection

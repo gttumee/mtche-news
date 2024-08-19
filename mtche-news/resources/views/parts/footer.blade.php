@@ -9,24 +9,25 @@
           <div class="col-xs-12 col-sm-6 col-xl-3 order-0 order-xl-0">
             <div class="footer-logo-wrapper text-center text-sm-start">
               <a href="#!">
-                <img src="./assets/img/branding/logo.png" alt="" class="bsb-tpl-logo-footer">MTCHE мэдээ
+                <img src="./assets/img/branding/logo.png" alt="" class="bsb-tpl-logo-footer">  
               </a>
+               MTCHE {{ __('menu.title') }}
             </div>
           </div>
 
           <div class="col-xs-12 col-xl-6 order-2 order-xl-1">
             <ul class="nav justify-content-center">
               <li class="nav-item">
-                <a class="nav-link link-secondary px-2 px-md-3" href="#!">Эхлэл</a>
+                <a class="nav-link link-secondary px-2 px-md-3" href={{route('index')}}>{{ __('menu.home') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-secondary px-2 px-md-3" href="#!">Бидний тухай</a>
+                <a class="nav-link link-secondary px-2 px-md-3" href={{route('index')}}>{{ __('menu.about') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-secondary px-2 px-md-3" href="#!">Мэдээний төрөлөөр</a>
+                <a class="nav-link link-secondary px-2 px-md-3" href={{route('index')}}>{{ __('menu.register') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-secondary px-2 px-md-3" href="#!">Хэрэгтэй мэдээлэл</a>
+                <a class="nav-link link-secondary px-2 px-md-3" href={{route('index')}}>{{ __('menu.contact') }}</a>
               </li>
             </ul>
           </div>

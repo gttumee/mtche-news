@@ -46,8 +46,12 @@ class ArticleResource extends Resource
                 ->label('Нийтлэл Япон'),
                 Forms\Components\FileUpload::make('image')
                     ->image()
-                    ->label('Зураг'),
-                    Select::make('flag')
+                    ->label('Зураг')
+                    ->imageCropAspectRatio('1:1')
+                    ->imageResizeTargetWidth('800')
+                    ->imageResizeTargetHeight('600')
+                    ->imageEditor(),
+                Select::make('flag')
                     ->options([
                         '1' => 'Идвэхтэй',
                         '0' => 'Идвэхгүй',

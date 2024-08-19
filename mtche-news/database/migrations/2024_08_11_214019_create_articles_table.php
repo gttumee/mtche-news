@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('category_id');  
             $table->string('title_mn')->nullable();
             $table->string('title_jp')->nullable();
-            $table->string('article')->nullable(); 
-            $table->string('japanese'); 
+            $table->text('article')->nullable(); 
+            $table->text('japanese'); 
             $table->string('image')->nullable(); 
             $table->string('flag')->default('0'); 
             $table->string('writer')->nullable();  

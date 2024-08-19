@@ -23,4 +23,8 @@ return [
     'more_detail' => 'もっと見る',
     'mail_get' => '電子メールで情報を取得する',
     'lang_read' => 'Монгол хэлээр',
+    'mail_register' => '登録',
+    'written_by' => '記事執筆者',
+    'introduction' => '出版社へのお問い合わせは以下のSNSまでご連絡ください。',
+
 ];

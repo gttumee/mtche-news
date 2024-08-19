@@ -56,7 +56,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href={{route('contact')}}>{{ __('menu.register') }}</a>
+              <a class="nav-link" href={{route('request')}}>{{ __('menu.register') }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href={{route('contact')}}>{{ __('menu.contact') }}</a>

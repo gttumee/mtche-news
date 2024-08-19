@@ -20,15 +20,13 @@
               <div class="entry-header mb-3">
                 <ul class="entry-meta list-unstyled d-flex mb-4">
                   <li>
-                    @foreach ($highlight->highligthCategory as $item)
                     @if ($lang =='mn')
                     <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                    href="#!">{{$item->name}}</a>
+                    href="#!">{{$highlight->highligthCategory->name}}</a>
                     @else
                     <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                    href="#!">{{$highlight->title_jp}}</a> 
+                    href="#!">{{$highlight->highligthCategory->title_jp}}</a> 
                     @endif
-                    @endforeach
                   </li>
                 </ul>
                 <h2 class="card-title entry-title display-3 fw-bold mb-4 lh-1">
@@ -94,7 +92,7 @@
           </div>
           <div class="col-12 col-md-6 d-flex">
             <img class="img-fluid rounded-end object-fit-cover" loading="lazy"
-              src="./assets/img/featured/featured-img-1.jpg" alt="Entrepreneurship">
+            src="{{ asset('storage/' . $highlight->image) }}" alt="Entrepreneurship">
           </div>
         </div>
       </div>
@@ -117,14 +115,14 @@
 
     <div class="container overflow-hidden">
       <div class="row gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9">
-        @foreach ($article as $item)
+        @foreach ($articles as $item)
         <div class="col-12 col-lg-4">
           <article>
             <div class="card border-0 bg-transparent">
               <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-                <a href="#!">
+                <a href={{route('article',['id' => $item->id])}}>
                   <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy"
-                    src="./assets/img/blog/blog-img-1.jpg" alt="Living">
+                  src="{{ asset('storage/' . $item->image) }}" alt="Living">
                 </a>
                 <figcaption>
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
@@ -143,18 +141,18 @@
                     <li>           
                       @if ($lang =='mn')
                       <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                      href="#!">{{$item->articleCategory->name}}</a>  
+                      href={{route('article',['id' => $item->id])}}>{{$item->articleCategory->name}}</a>  
                       @else
                       <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                      href="#!">{{$item->articleCategory->japanese}}</a> 
+                      href={{route('article',['id' => $item->id])}}>{{$item->articleCategory->japanese}}</a> 
                       @endif
                     </li>
                   </ul>
                   <h2 class="card-title entry-title h4 m-0">
                     @if ($lang =='mn')
-                    <a class="link-dark text-decoration-none" href="#!">{{$item->title_mn}}</a>
+                    <a class="link-dark text-decoration-none"href={{route('article',['id' => $item->id])}}>{{$item->title_mn}}</a>
                     @else
-                    <a class="link-dark text-decoration-none" href="#!">{{$item->title_jp}}</a>
+                    <a class="link-dark text-decoration-none" href={{route('article',['id' => $item->id])}}>{{$item->title_jp}}</a>
                     @endif
                   </h2>
                 </div>
@@ -185,7 +183,7 @@
                         <path
                           d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
                       </svg>
-                      <span class="ms-2 fs-7">1000</span>
+                      <span class="ms-2 fs-7">{{ $item->comment_count }}</span>
                     </a>
                   </li>
                   <li>
@@ -205,7 +203,6 @@
         @endforeach
       </div>
     </div>
-
     <div class="container">
       <div class="row">
         <div class="col text-center">  
@@ -214,34 +211,5 @@
       </div>
     </div>
   </section>
-
-  <!-- Newsletter 1 - Bootstrap Brain Component -->
-  <section class="py-3 py-md-5 py-xl-10 bsb-section-py-xxl-1 bg-accent">
-    <div class="container">
-      <div class="row justify-content-md-center">
-        <div class="col-12 col-md-9 col-lg-8 col-xl-8 col-xxl-7">
-          <h2 class="display-5 fw-bold mb-4 mb-md-5 mb-xxl-6 text-center text-accent-emphasis">{{ __('menu.mail_get') }}
-          </h2>
-      </div>
-      
-      </div>
-      <div class="row justify-content-md-center">
-        <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
-          <form class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
-            <div class="col-12 col-lg-8">
-              <label for="email-newsletter-component" class="visually-hidden">{{ __('page.email') }}</label>
-              <input type="email" class="form-control bsb-form-control-3xl" id="email-newsletter-component" value=""
-                placeholder="{{ __('page.email') }}" aria-label="email-newsletter-component" aria-describedby="email-newsletter-help"
-                required>
-            </div>
-            <div class="col-12 col-lg-3 text-center text-lg-start">
-              <button type="submit" class="btn btn-primary bsb-btn-3xl">{{ __('menu.register') }}</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </main>
 @endsection
