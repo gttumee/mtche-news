@@ -10,7 +10,7 @@ return [
     'language' => '言語',
     'japanese' => '日本語',
     'mongolian' => 'Монгол хэл',
-    'title' => '記事',
+    'title' => 'メディア',
     'japan' => '日本',
     'business' => 'ビズネス',
     'technology' => '技術',
@@ -26,5 +26,12 @@ return [
     'mail_register' => '登録',
     'written_by' => '記事執筆者',
     'introduction' => '出版社へのお問い合わせは以下のSNSまでご連絡ください。',
+    'article_title'=>'記事タイトル',
+    'article_image'=>'画像',
+    'article_aritcle'=>'記事',
+    'article_title_motto'=>'お気に入りの記事を共有しましょう',
+    'arcitle_content' => 'あなたの好きな記事をぜひ私たちに送ってください。他の皆様が知識を深める手助けをしています。あなたの貢献が、より多くの人々にとって有益な情報源となるでしょう。',
+    
+
 
 ];

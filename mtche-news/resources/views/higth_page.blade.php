@@ -11,17 +11,17 @@
               <li>
                 @if ($lang =='mn')
                 <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                href="#!">{{$article->articleCategory->name}}</a>
+                href="#!">{{$highlight->highligthCategory->name}}</a>
              @else
              <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-             href="#!">{{$article->articleCategory->japanese}}</a>
+             href="#!">{{$highlight->highligthCategory->japanese}}</a>
                @endif
               </li>
             </ul>
             @if ($lang =='mn')
-            <h2 class="display-3 fw-bold mb-4">{{$article->title_mn}}</h2>
+            <h2 class="display-3 fw-bold mb-4">{{$highlight->title_mn}}</h2>
             @else
-            <h2 class="display-3 fw-bold mb-4">{{$article->title_jp}}</h2>
+            <h2 class="display-3 fw-bold mb-4">{{$highlight->title_jp}}</h2>
             @endif
           </div>
           <div class="entry-footer">
@@ -35,7 +35,7 @@
                     <path
                       d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                   </svg>
-                  <span class="ms-2 fs-7">{{ $article->created_at->format('Y/m/d') }}</span>
+                  <span class="ms-2 fs-7">{{ $highlight->created_at->format('Y/m/d') }}</span>
                 </a>
               </li>
               <li>
@@ -59,7 +59,7 @@
         <div class="col-12 col-lg-4">
           <a class="d-block bsb-hover-image overflow-hidden rounded" href="#!">
             <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy"
-            src="{{ asset('storage/' . $article->image) }}" alt="">
+            src="{{ asset('storage/' . $highlight->image) }}" alt="">
               
           </a>
         </div>
@@ -76,16 +76,16 @@
         <div class="row justify-content-md-center gy-3 gy-xl-4">
           <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 gy-3 gy-xl-4 bsb-entry-content">
             @if ($lang =='mn')
-            {{$article->title_mn}}  
+            {{$highlight->title_mn}}  
             @else
-            {{$article->title_jp}}  
+            {{$highlight->title_jp}}  
             @endif
             @if ($lang =='mn')
-            {{$article->article}}
+            {{$highlight->article}}
             @else
-            {{$article->japanese}}  
+            {{$highlight->japanese}}  
             @endif
-            <img class="img-fluid mt-3 mb-5 rounded" loading="lazy" src="{{ asset('storage/' . $article->image) }}" alt="">
+            <img class="img-fluid mt-3 mb-5 rounded" loading="lazy" src="{{ asset('storage/' . $highlight->image) }}" alt="">
           </div>
         </div>
       </div>
@@ -97,11 +97,11 @@
       <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6">
         <form id="commentForm">
           @csrf
-          <input type="hidden" name="article_id" value="{{ $article->id }}"> 
+          <input type="hidden" name="article_id" value="{{ $highlight->id }}"> 
           <div class="row gy-3 p-1">
             <div class="col-12">
               <label for="fullname" class="form-label">{{ __('page.name') }} <span class="text-danger">*</span></label>
-              <input type="hidden" id="commentable_id" name="commentable_id" value="article">
+              <input type="hidden" id="commentable_id" name="commentable_id" value="highlight">
               <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
             </div>
             <div class="col-12">
@@ -154,7 +154,7 @@
                   <div class="card-body">
                     <h6 class="card-subtitle mb-2 text-body-secondary">{{ __('menu.written_by') }}</h6>
                     <h3 class="card-title mb-2">
-                      <a class="card-link link-dark text-decoration-none" href="#!">{{$article->writer}}</a>
+                      <a class="card-link link-dark text-decoration-none" href="#!">{{$highlight->writer}}</a>
                     </h3>
                     <p class="card-text mb-3">{{ __('menu.introduction') }}</p>
                     <ul class="bsb-social-media nav m-0">
@@ -216,7 +216,7 @@
 
       <div class="container overflow-hidden">
         <div class="row gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9">
-          @foreach ($latestArticles as $item)
+          @foreach ($latesthighlight as $item)
           <div class="col-12 col-lg-4">
             <article>
               <div class="card border-0 bg-transparent">
@@ -242,10 +242,10 @@
                       <li>
                         @if ($lang =='mn')
                         <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                        href={{route('article',['id' => $item->id])}}>{{$item->articleCategory->name}}</a>  
+                        href={{route('article',['id' => $item->id])}}>{{$item->highligthCategory->name}}</a>  
                         @else
                         <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                        href={{route('article',['id' => $item->id])}}>{{$item->articleCategory->japanese}}</a>
+                        href={{route('article',['id' => $item->id])}}>{{$item->highligthCategory->japanese}}</a>
                         @endif
                        
                       </li>

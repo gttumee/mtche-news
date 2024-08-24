@@ -7,21 +7,21 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-12">
-          @foreach ($articles as $item)
+          @foreach ($highlights as $item)
           @if ($lang == 'mn')
-              <h2 class="display-3 fw-bold mb-4">{{ $item->articleCategory->name}}</h2>
+              <h2 class="display-3 fw-bold mb-4">{{ $item->highligthCategory->name}}</h2>
           @else
-              <h2 class="display-3 fw-bold mb-4">{{ $item->articleCategory->japanese }}</h2>
+              <h2 class="display-3 fw-bold mb-4">{{ $item->highligthCategory->japanese }}</h2>
       @endif
       @endforeach      
           <div class="row">
             <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 d-flex gap-3">
               <p class="lead m-0">—</p>
-              @if (isset($article[0]) && $article[0]->articleCategory)
+              @if (isset($highlights[0]) && $highlights[0]->highligthCategory)
               @if ($lang == 'mn')
-                  <p class="lead text-secondary m-0">Энэхүү булангаар хүний {{$article[0]->articleCategory->name}} талаар дэлгэрэнгүй тайлбарлах</p>
+                  <p class="lead text-secondary m-0">Энэхүү булангаар хүний {{$highlights[0]->highligthCategory->name}} талаар дэлгэрэнгүй тайлбарлах</p>
               @else
-                  <p class="lead text-secondary m-0">本件については{{$article[0]->articleCategory->japanese}}詳しく説明します。</p>
+                  <p class="lead text-secondary m-0">本件については{{$highlights[0]->highligthCategory->japanese}}詳しく説明します。</p>
               @endif
           @else
               <p class="lead text-secondary m-0">Category information not available.</p>
@@ -46,12 +46,12 @@
   
       <div class="container overflow-hidden">
         <div class="row gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9">
-          @foreach ($articles as $item)
+          @foreach ($highlights as $item)
           <div class="col-12 col-lg-4">
             <article>
               <div class="card border-0 bg-transparent">
                 <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-                  <a href={{route('article',['id' => $item->id])}}>
+                  <a href={{route('higthArticle',['id' => $item->id])}}>
                     <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy"
                     src="{{ asset('storage/' . $item->image) }}" alt="">
                   </a>
@@ -72,18 +72,18 @@
                       <li>
                         @if ($lang =='mn')
                         <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                        href={{route('article',['id' => $item->id])}}>{{$item->articleCategory->name}}</a>  
+                        href={{route('higthArticle',['id' => $item->id])}}>{{$item->highligthCategory->name}}</a>  
                         @else
                         <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                        href={{route('article',['id' => $item->id])}}>{{$item->articleCategory->japanese}}</a>  
+                        href={{route('higthArticle',['id' => $item->id])}}>{{$item->highligthCategory->japanese}}</a>  
                         @endif
                       </li>
                     </ul>
                     <h2 class="card-title entry-title h4 m-0">
                       @if ($lang =='mn')
-                      <a class="link-dark text-decoration-none" href={{route('article',['id' => $item->id])}}>{{$item->title_mn}}</a>
+                      <a class="link-dark text-decoration-none" href={{route('higthArticle',['id' => $item->id])}}>{{$item->title_mn}}</a>
                       @else
-                      <a class="link-dark text-decoration-none" href={{route('article',['id' => $item->id])}}>{{$item->title_jp}}</a>
+                      <a class="link-dark text-decoration-none" href={{route('higthArticle',['id' => $item->id])}}>{{$item->title_jp}}</a>
                       @endif
                     </h2>
                   </div>

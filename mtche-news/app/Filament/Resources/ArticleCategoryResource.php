@@ -54,8 +54,18 @@ class ArticleCategoryResource extends Resource
                     ->searchable()
                     ->label('Япон'),
                 Tables\Columns\TextColumn::make('flag')
+                     ->badge()
+                     ->color(fn (string $state): string => match ($state) {
+                    '1' => 'success',
+                    '0' => 'warning',
+                })
+                     ->formatStateUsing(fn (string $state): string => match ($state) {
+                    '1' => 'Нийтлэгдсэн',
+                    '0' => 'Нийтлэгдээгүй', // 必要に応じて他の値のテキストも設定可能
+                    default => $state, // デフォルトはそのままの値を表示
+                 })
                     ->searchable()
-                    ->label('Идэвхтэй'),
+                    ->label('Төлөв'),
             ])
             ->filters([
                 //

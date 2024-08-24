@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share('locale', App::getLocale());
+        App::setLocale(session('locale', 'mn'));
 
     }
 }

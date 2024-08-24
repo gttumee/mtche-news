@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ArticleRequest;
 use App\Http\Controllers\FrontEndContoller;
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
@@ -32,6 +34,11 @@ Route::controller(FrontEndContoller::class)->group(function () {
     Route::post('/comment', 'comment')->name('comment');
     Route::get('/comment', 'comment')->name('comment');
     Route::get('/request', 'artocleRequest')->name('request');
-
-
+    Route::get('/higth', 'higthArticle')->name('higthArticle');
+    Route::get('/higthligths', 'highlightPage')->name('highlightPage');
+    Route::post('/request', 'comment')->name('comment');
+    Route::get('/request', 'comment')->name('comment');
 });
+
+Route::get('/article-request', [ArticleRequest::class, 'index'])->name('article-request');
+Route::post('/article-request', [ArticleRequest::class, 'index'])->name('article-request');

@@ -13,14 +13,15 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string('category_id');  
+            $table->string('category_id')->nullable()w;  
             $table->string('title_mn')->nullable();
             $table->string('title_jp')->nullable();
             $table->text('article')->nullable(); 
-            $table->text('japanese'); 
+            $table->text('japanese')->nullable(); 
             $table->string('image')->nullable(); 
             $table->string('flag')->default('0'); 
             $table->string('writer')->nullable();  
+            $table->string('contact')->nullable();  
             $table->timestamps();
         });
     }

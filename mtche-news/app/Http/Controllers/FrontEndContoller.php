@@ -34,16 +34,23 @@ class FrontEndContoller extends Controller
     {
         $lang = App::getLocale();
         $articles = Article::with('articleCategory')
-            ->orderBy('created_at', 'desc')
-            ->get();
-    
-        // 各記事ごとにコメント数を集計
+        ->where('flag','1')
+        ->orderBy('created_at', 'desc')
+        ->get();
         $articles->each(function ($article) {
-            $article->comment_count = $article->comments()->count();
+        $article->comment_count = Comment::where('article_id', $article->id)
+        ->where('commentable_type', 'article')
+        ->count();
         });
-    
-        $highlight = Highlight::with('highligthCategory')->first();
-    
+        $highlight = Highlight::with('highligthCategory')
+        ->where('flag','1')
+        ->orderBy('created_at', 'desc')
+        ->first();
+        if ($highlight) {
+        $highlight->comment_count = Comment::where('article_id', $highlight->id)
+        ->where('commentable_type', 'highlight')
+        ->count();
+    }
         return view('index', compact('lang', 'articles', 'highlight'));
     }
     
@@ -55,8 +62,10 @@ class FrontEndContoller extends Controller
 
     public function news(){ 
         $lang = App::getLocale();
-        $article = Article::all();
-        $highlight = Highlight::first();
+        $article = Article::where('flag','1')
+        ->get();
+        $highlight = Highlight::where('flag','1')
+        ->first();
         return view('news', compact('lang','article','highlight'));
     }     
 
@@ -64,13 +73,13 @@ class FrontEndContoller extends Controller
         $id = $request->query('id');
         $lang = App::getLocale();
         $articles = Article::where('category_id', $id)
+        ->where('flag','1')
         ->orderBy('created_at', 'asc')
         ->get();
         $articles->each(function ($article) {
             $article->comment_count = $article->comments()->count();
         });
-        $highlight = Highlight::all();
-        return view('page', compact('lang','articles','highlight'));
+        return view('page', compact('lang','articles'));
     }
 
     
@@ -78,10 +87,14 @@ class FrontEndContoller extends Controller
 {
     $id = $request->query('id');
     $lang = App::getLocale();
-    $article = Article::with('articleCategory')->where('id', $id)->first();
+    $article = Article::with('articleCategory')
+    ->where('id', $id)
+    ->where('flag','1')
+    ->first();
     $comments = Comment::where('article_id', $id)->get();
     $article->comment_count = $comments->count();
     $latestArticles = Article::with('articleCategory')
+        ->where('flag','1')
         ->orderBy('created_at', 'desc')
         ->take(3)
         ->get();
@@ -105,6 +118,7 @@ class FrontEndContoller extends Controller
         ]);
         $comment=Comment::create([
         'article_id' => $request->input('article_id'),
+        'commentable_type' => $request->input('commentable_id'),
         'name' => $request->input('fullname'),
         'content' => $request->input('message'),
          ]);
@@ -123,11 +137,52 @@ class FrontEndContoller extends Controller
         
         $lang = App::getLocale();
         $article = Article::with('articleCategory')
+        ->where('flag','1')
         ->orderBy('created_at', 'desc')
         ->get();
 
         $commentCount = Comment::all();
         $highlight = Highlight::with('highligthCategory')->first();
         return view('article_request', compact('lang','article','highlight','commentCount'));
+    }
+
+    public function higthArticle(Request $request)
+    {
+        $id = $request->query('id');
+        $lang = App::getLocale();
+        $highlight = Highlight::with('highligthCategory')
+        ->where('id', $id)
+        ->where('flag','1')
+        ->first();
+        $comments = Comment::where('article_id', $id)
+        ->where('commentable_type', 'highlight')
+        ->get();
+        $highlight->comment_count = $comments->count();
+        $latesthighlight = Highlight::with('highligthCategory')
+        ->where('flag','1')
+        ->orderBy('created_at', 'desc')
+        ->take(3)
+        ->get();
+        $latesthighlight->each(function ($highlight) {
+            $highlight->comment_count = Comment::where('article_id', $highlight->id)
+                ->where('commentable_type', 'highlight')
+                ->count();
+        });
+    return view('higth_page', compact('lang', 'highlight', 'comments', 'latesthighlight'));
+    }
+    
+    public function highlightPage(Request $request){
+        $id = $request->query('id');
+        $lang = App::getLocale();
+        $highlights = Highlight::where('category_id', $id)
+        ->where('flag','1')
+        ->orderBy('created_at', 'asc')
+        ->get();
+        $highlights->each(function ($highlight) {
+            $highlight->comment_count = Comment::where('article_id', $highlight->id)
+                ->where('commentable_type', 'highlight')
+                ->count();
+        });
+        return view('higth', compact('lang','highlights'));
     }
 }

@@ -48,15 +48,15 @@
               <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="blogDropdown">
                 @foreach($highlightMenu as $highlight)
                 @if ($lang =='mn')
-                <li><a class="dropdown-item" href={{route('page')}}>{{$highlight->name}}</a></li>
+                <li><a class="dropdown-item" href={{route('highlightPage',['id' => $highlight->id])}}>{{$highlight->name}}</a></li>
                 @else
-                <li><a class="dropdown-item" href={{route('page')}}>{{$highlight->japanese}}</a></li>
+                <li><a class="dropdown-item" href={{route('highlightPage',['id' => $highlight->id])}}>{{$highlight->japanese}}</a></li>
                 @endif
                 @endforeach
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href={{route('request')}}>{{ __('menu.register') }}</a>
+              <a class="nav-link" href={{route('article-request')}}>{{ __('menu.register') }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href={{route('contact')}}>{{ __('menu.contact') }}</a>

@@ -76,7 +76,7 @@
               &copy; 2024. All Rights Reserved.
             </div>
             <div class="credits text-secondary text-center mt-2 fs-7">
-              Нийтэлсэн <a href="https://mtche.jp/" class="link-secondary text-decoration-none">株式会社MTCHE</a>
+              <a href="https://mtche.jp/" class="link-secondary text-decoration-none">株式会社MTCHE</a>
               <span class="text-primary">&#9829;</span>
             </div>
           </div>
