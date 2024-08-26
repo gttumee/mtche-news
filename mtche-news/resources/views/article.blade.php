@@ -81,9 +81,9 @@
             {{$article->title_jp}}  
             @endif
             @if ($lang =='mn')
-            {{$article->article}}
+            {!!$article->article!!}
             @else
-            {{$article->japanese}}  
+            {!!$article->japanese!!}  
             @endif
             <img class="img-fluid mt-3 mb-5 rounded" loading="lazy" src="{{ asset('storage/' . $article->image) }}" alt="">
           </div>

@@ -81,9 +81,9 @@
             {{$highlight->title_jp}}  
             @endif
             @if ($lang =='mn')
-            {{$highlight->article}}
+            {!!$highlight->article!!}
             @else
-            {{$highlight->japanese}}  
+            {!!$highlight->japanese!!}  
             @endif
             <img class="img-fluid mt-3 mb-5 rounded" loading="lazy" src="{{ asset('storage/' . $highlight->image) }}" alt="">
           </div>
