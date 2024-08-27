@@ -15,16 +15,11 @@
           <div class="row">
             <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 d-flex gap-3">
               <p class="lead m-0">—</p>
-              @if (isset($article[0]) && $article[0]->articleCategory)
               @if ($lang == 'mn')
-                  <p class="lead text-secondary m-0">Энэхүү булангаар хүний {{$article[0]->articleCategory->name}} талаар дэлгэрэнгүй тайлбарлах</p>
+                  <p class="lead text-secondary m-0">Энэхүү булангаар хүний {{$articles[0]->articleCategory->name}} талаар дэлгэрэнгүй тайлбарлах</p>
               @else
-                  <p class="lead text-secondary m-0">本件については{{$article[0]->articleCategory->japanese}}詳しく説明します。</p>
+                  <p class="lead text-secondary m-0">本件については{{$articles[0]->articleCategory->japanese}}詳しく説明します。</p>
               @endif
-          @else
-              <p class="lead text-secondary m-0">Category information not available.</p>
-          @endif
-          
             </div>
           </div>
         </div>
