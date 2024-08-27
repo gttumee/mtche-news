@@ -10,7 +10,7 @@
           <div class="row">
             <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 d-flex gap-3">
               <p class="lead m-0">—</p>
-              <p class="lead text-secondary m-0">Доорх формоор холбоо барина уу</p>
+              <p class="lead text-secondary m-0">{{ __('menu.arcitle_contact_ttile') }}</p>
             </div>
           </div>
         </div>
