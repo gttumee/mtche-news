@@ -70,7 +70,6 @@
               <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="languageDropdown">
                 <li><a class="dropdown-item" href="{{ route('lang.switch', 'mn') }}">{{ __('menu.mongolian') }}</a></li>
                 <li><a class="dropdown-item" href="{{ route('lang.switch', 'ja') }}">{{ __('menu.japanese') }}</a></li>
-                
               </ul>
             </li>
           </ul>

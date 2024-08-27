@@ -114,9 +114,11 @@
                       <span class="px-3">&bull;</span>
                     </li>
                     <li>
-                      <a class="link-secondary text-decoration-none d-flex align-items-center" href="#!">
-                        <span class="ms-2 fs-7">{{ __('menu.lang_read') }}</span>
-                      </a>
+                        @if ($lang =='mn')
+                        <li><a class="dropdown-item" href="{{ route('lang.switch', 'ja') }}">{{ __('menu.lang_read') }}</a></li>
+                        @else
+                        <li><a class="dropdown-item" href="{{ route('lang.switch', 'mn') }}">{{ __('menu.lang_read') }}</a></li>
+                        @endif
                     </li>
                   </ul>
                 </div>

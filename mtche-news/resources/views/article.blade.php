@@ -53,6 +53,14 @@
                   <span class="ms-2 fs-7">{{ count($comments) }}</span>
                 </a>
               </li>
+              <span class="px-3">&bull;</span>
+                    <li>
+                      @if ($lang =='mn')
+                      <li><a class="dropdown-item" href="{{ route('lang.switch', 'ja') }}">{{ __('menu.lang_read') }}</a></li>
+                      @else
+                      <li><a class="dropdown-item" href="{{ route('lang.switch', 'mn') }}">{{ __('menu.lang_read') }}</a></li>
+                      @endif
+                  </li>
             </ul>
           </div>
         </div>
@@ -288,6 +296,14 @@
                         <span class="ms-2 fs-7">{{ $item->comment_count }}</span>
                       </a>
                     </li>
+                    <span class="px-3">&bull;</span>
+                    <li>
+                      @if ($lang =='mn')
+                      <li><a class="dropdown-item" href="{{ route('lang.switch', 'ja') }}">{{ __('menu.lang_read') }}</a></li>
+                      @else
+                      <li><a class="dropdown-item" href="{{ route('lang.switch', 'mn') }}">{{ __('menu.lang_read') }}</a></li>
+                      @endif
+                  </li>
                   </ul>
                 </div>
               </div>
