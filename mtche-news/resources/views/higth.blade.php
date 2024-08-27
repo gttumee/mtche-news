@@ -7,13 +7,11 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-12">
-          @foreach ($highlights as $item)
           @if ($lang == 'mn')
-              <h2 class="display-3 fw-bold mb-4">{{ $item->highligthCategory->name}}</h2>
+              <h2 class="display-3 fw-bold mb-4">{{ $highlights['0']->highligthCategory->name}}</h2>
           @else
-              <h2 class="display-3 fw-bold mb-4">{{ $item->highligthCategory->japanese }}</h2>
-      @endif
-      @endforeach      
+              <h2 class="display-3 fw-bold mb-4">{{ $highlights['0']->highligthCategory->japanese }}</h2>
+      @endif      
           <div class="row">
             <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 d-flex gap-3">
               <p class="lead m-0">—</p>
