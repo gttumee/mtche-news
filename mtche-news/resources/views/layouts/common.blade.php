@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Document Title, Description, and Author -->
-  <title>MTCHE нийтлэл</title>
-  <meta name="description" content="MTCHE нийтлэл">
+  <title>MTCHE Media</title>
+  <meta name="description" content="MTCHE Media">
   <meta name="author" content="BootstrapBrain">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
