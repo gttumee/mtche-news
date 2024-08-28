@@ -11,7 +11,7 @@
               <a href="#!">
                 <img src="./assets/img/branding/logo.png" alt="" class="bsb-tpl-logo-footer">  
               </a>
-               MTCHE {{ __('menu.title') }}
+               MTCHE Media
             </div>
           </div>
 
@@ -21,13 +21,13 @@
                 <a class="nav-link link-secondary px-2 px-md-3" href={{route('index')}}>{{ __('menu.home') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-secondary px-2 px-md-3" href={{route('index')}}>{{ __('menu.about') }}</a>
+                <a class="nav-link link-secondary px-2 px-md-3" href={{route('about')}}>{{ __('menu.about') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-secondary px-2 px-md-3" href={{route('index')}}>{{ __('menu.register') }}</a>
+                <a class="nav-link link-secondary px-2 px-md-3" href={{route('article-request')}}>{{ __('menu.register') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-secondary px-2 px-md-3" href={{route('index')}}>{{ __('menu.contact') }}</a>
+                <a class="nav-link link-secondary px-2 px-md-3" href={{route('contact')}}>{{ __('menu.contact') }}</a>
               </li>
             </ul>
           </div>

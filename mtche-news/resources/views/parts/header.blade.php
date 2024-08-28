@@ -6,7 +6,7 @@
     <div class="container">
       <a class="navbar-brand" href={{route('index')}} style="color: black; font-family: 'Arial', sans-serif;">
         <img src="./assets/img/branding/logo.png" class="bsb-tpl-logo" alt="">
-        MTCHE {{ __('menu.title') }}
+        MTCHE Media
       </a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">

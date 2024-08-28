@@ -31,6 +31,7 @@ Route::controller(FrontEndContoller::class)->group(function () {
     Route::get('/page', 'page')->name('page');
     Route::get('/article', 'article')->name('article');
     Route::get('/contact', 'contact')->name('contact');
+    Route::post('/contact', 'contact')->name('contact');
     Route::post('/comment', 'comment')->name('comment');
     Route::get('/comment', 'comment')->name('comment');
     Route::get('/request', 'artocleRequest')->name('request');

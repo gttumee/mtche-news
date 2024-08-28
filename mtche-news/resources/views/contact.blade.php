@@ -25,10 +25,15 @@
     <section class="py-3 py-md-5 py-xl-10">
       <div class="container">
         <div class="row gy-4 gy-md-5 gy-lg-0 align-items-md-center">
+          @if (session('success'))
+          <div class="alert alert-success">
+          {{ session('success') }}
+          </div>
+          @endif
           <div class="col-12 col-lg-6">
             <div class="border overflow-hidden">
-
-              <form action="#!">
+                <form action="{{route('contact')}}" method="post" enctype="multipart/form-data">
+                  @csrf
                 <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                   <div class="col-12">
                     <label for="fullname" class="form-label">{{ __('page.name') }} <span class="text-danger">*</span></label>
@@ -65,7 +70,7 @@
                     <input type="text" class="form-control" id="subject" name="subject" value="" required>
                   </div>
                   <div class="col-12">
-                    <label for="message" class="form-label">Санал хүсэлт <span class="text-danger">*</span></label>
+                    <label for="message" class="form-label">{{ __('page.messege') }} <span class="text-danger">*</span></label>
                     <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
                   </div>
                   <div class="col-12">
@@ -145,5 +150,4 @@
       </div>
     </section>
   </main>
-
 @endsection

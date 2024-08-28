@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\ArticleCategory;
 use App\Models\Comment;
+use App\Models\Contact;
 use App\Models\Highlight;
 use App\Models\HighlightCategory;
 use Illuminate\Support\Facades\View;
@@ -106,9 +107,27 @@ class FrontEndContoller extends Controller
 }
 
       
-    public function contact(){
-        $lang = App::getLocale();
-        return view('contact', compact('lang'));
+    public function contact(Request $request){
+        {
+            $lang = App::getLocale(); 
+            if ($request->has('fullname')) {
+                $articleData = [
+                    'name' =>$request->input('fullname'),
+                    'email' => $request->input('email'),
+                    'phone' =>$request->input('phone'),
+                    'title' =>$request->input('subject'),
+                    'message' => $request->input('message'),
+                ];
+        
+                $article = Contact::create($articleData);
+                $successMessage = $lang === 'mn' ? 
+                'Таны хүсэлтийг хүлээн авлаа эргэн холбоо барина' : 
+                'リクエストを受け取り次第、折り返しご連絡させていただきます。';
+                session()->flash('success', $successMessage);
+    
+            }
+            return view('contact', compact('lang'));
+        }
     }
 
     public function comment(Request $request){

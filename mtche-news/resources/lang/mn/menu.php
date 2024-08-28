@@ -10,7 +10,6 @@ return [
     'language' => '言語',
     'japanese' => '日本語',
     'mongolian' => 'Монгол хэл',
-    'title' => 'Медиа',
     'japan' => 'Япон',
     'business' => 'Бизнес',
     'technology' => 'Технологи',
