@@ -13,7 +13,7 @@
               @if ($lang =='mn')
               <p class="lead text-secondary m-0">Доорх формоор холбоо барина уу</p>
               @else
-              <p class="lead text-secondary m-0">Доорх формоор холбоо барина уу</p>  
+              <p class="lead text-secondary m-0">下記フォームよりお問い合わせください</p>  
               @endif
             </div>
           </div>
@@ -114,7 +114,7 @@
                         <h4 class="mb-2">{{ __('page.phone') }}</h4>
                         <hr class="w-75 mb-3 border-dark-subtle">
                         <p class="mb-0">
-                          <a class="link-secondary text-decoration-none" href="tel:+15057922430">(976) 78103347
+                          <a class="link-secondary text-decoration-none">(+976) 78103347
                           </a>
                         </p>
                       </div>

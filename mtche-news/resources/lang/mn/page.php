@@ -35,5 +35,6 @@ return [
     'messege' => 'Санал хүсэлт',
     'send' => 'Илгээх',
     'address' => 'Хаяг',
+    'phone_number' => '(+976) 78103347',
     'company_address' => '3-14-7-301 Aratacho Kobe Shi Hyogo Ku Hyogo Ken 652-0032 Japan',
 ];

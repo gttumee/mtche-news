@@ -10,7 +10,11 @@
           <div class="row">
             <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 d-flex gap-3">
               <p class="lead m-0">—</p>
+              @if ($lang =='mn')
               <p class="lead text-secondary m-0">Доорх формоор холбоо барина уу</p>
+              @else
+              <p class="lead text-secondary m-0">下記フォームよりお問い合わせください</p>  
+              @endif
             </div>
           </div>
         </div>
@@ -66,10 +70,6 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <label for="subject" class="form-label">{{ __('page.sub') }} <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="subject" name="subject" value="" required>
-                  </div>
-                  <div class="col-12">
                     <label for="message" class="form-label">{{ __('page.messege') }} <span class="text-danger">*</span></label>
                     <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
                   </div>
@@ -115,7 +115,7 @@
                         <h4 class="mb-2">{{ __('page.phone') }}</h4>
                         <hr class="w-75 mb-3 border-dark-subtle">
                         <p class="mb-0">
-                          <a class="link-secondary text-decoration-none" href="tel:+15057922430">(976) 78103347
+                          <a class="link-secondary text-decoration-none" >{{ __('page.phone_number') }}
                           </a>
                         </p>
                       </div>

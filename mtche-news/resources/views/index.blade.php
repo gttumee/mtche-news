@@ -22,18 +22,18 @@
                   <li>
                     @if ($lang =='mn')
                     <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                    href="#!">{{$highlight->highligthCategory->name}}</a>
+                    href={{route('higthArticle',['id' => $highlight->id])}}>{{$highlight->highligthCategory->name}}</a>
                     @else
                     <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                    href="#!">{{$highlight->highligthCategory->japanese}}</a> 
+                    href={{route('higthArticle',['id' => $highlight->id])}}>{{$highlight->highligthCategory->japanese}}</a> 
                     @endif
                   </li>
                 </ul>
                 <h2 class="card-title entry-title display-3 fw-bold mb-4 lh-1">
                   @if ($lang =='mn')
-                  <a class="link-dark text-decoration-none" href="#!">{{$highlight->title_mn}}</a>
+                  <a class="link-dark text-decoration-none" href={{route('higthArticle',['id' => $highlight->id])}}>{{$highlight->title_mn}}</a>
                   @else
-                  <a class="link-dark text-decoration-none" href="#!">{{$highlight->title_jp}}</a>
+                  <a class="link-dark text-decoration-none" href={{route('higthArticle',['id' => $highlight->id])}}>{{$highlight->title_jp}}</a>
                   @endif
                 </h2>
               </div>

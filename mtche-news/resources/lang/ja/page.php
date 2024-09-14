@@ -33,9 +33,10 @@ return [
     'email' => 'メール',
     'phone' => '電話番号',
     'sub' => 'タイトル',
-    'messege' => 'メッセージ入力',
+    'messege' => '内容',
     'send' => '送信',
     'address' => '住所',
+    'phone_number' => '078-587-7299',
     'company_address' => '兵庫県神戸市兵庫区荒田町3丁目14-7-301',
     
 ];

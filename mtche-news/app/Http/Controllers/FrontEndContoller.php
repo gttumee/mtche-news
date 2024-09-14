@@ -115,7 +115,6 @@ class FrontEndContoller extends Controller
                     'name' =>$request->input('fullname'),
                     'email' => $request->input('email'),
                     'phone' =>$request->input('phone'),
-                    'title' =>$request->input('subject'),
                     'message' => $request->input('message'),
                 ];
         
