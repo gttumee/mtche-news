@@ -7,21 +7,24 @@
       <div class="row gy-3 gy-lg-0 align-items-lg-center justify-content-lg-between">
         <div class="col-12 col-lg-7 order-1 order-lg-0">
           <div class="entry-header mb-3">
-            <ul class="entry-meta list-unstyled d-flex mb-3">
+            <ul class="entry-meta list-unstyled d-flex mb-4">
               <li>
-                @if ($lang == 'mn')
-                <h2 class="display-3 fw-bold mb-4">{{ $highlight->highligthCategory->name }}</h2>
-            @else
-                <h2 class="display-3 fw-bold mb-4">{{ $highlight->highligthCategory->japanese }}</h2>
-            @endif
-            
+                @if ($lang =='mn')
+                <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
+                href="#!">{{$highlight->highligthCategory->name}}</a>
+                @else
+                <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
+                href="#!">{{$highlight->highligthCategory->japanese}}</a> 
+                @endif
               </li>
             </ul>
-            @if ($lang =='mn')
-            <h2 class="display-3 fw-bold mb-4">{{$highlight->title_mn}}</h2>
-            @else
-            <h2 class="display-3 fw-bold mb-4">{{$highlight->title_jp}}</h2>
-            @endif
+            <h2 class="card-title entry-title display-3 fw-bold mb-4 lh-1">
+              @if ($lang =='mn')
+              <a class="link-dark text-decoration-none" href="#!">{{$highlight->title_mn}}</a>
+              @else
+              <a class="link-dark text-decoration-none" href="#!">{{$highlight->title_jp}}</a>
+              @endif
+            </h2>
           </div>
           <div class="entry-footer">
             <ul class="entry-meta list-unstyled d-flex align-items-center m-0">
