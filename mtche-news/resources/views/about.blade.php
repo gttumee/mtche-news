@@ -33,8 +33,8 @@
                 </div>
                 <div class="col-md-7">
                   <div class="card-body p-0">
-                    <h2 class="card-title h4 mb-3">Ямар асуудал шийдэх вэ?</h2>
-                    <p class="card-text">Японд амьдарч байгаа Монголчуудын асуудал бэршээлд зөвөлгөө заавар өгөх</p>
+                    <h2 class="card-title h4 mb-3">{{ __('page.advantage_title') }}</h2>
+                    <p class="card-text">{{ __('page.advantage') }}</p>
                   </div>
                 </div>
               </div>
@@ -48,8 +48,8 @@
                 </div>
                 <div class="col-md-7">
                   <div class="card-body p-0">
-                    <h2 class="card-title h4 mb-3">Хамтын ажиллагаа</h2>
-                    <p class="card-text">Хамтын ажиллагаа</p>
+                    <h2 class="card-title h4 mb-3">{{ __('page.motto_title') }}</h2>
+                    <p class="card-text">{{ __('page.motto') }}</p>
                   </div>
                 </div>
               </div>
