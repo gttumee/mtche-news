@@ -61,7 +61,7 @@ class ArticleResource extends Resource
                 Forms\Components\TextInput::make('writer')
                     ->maxLength(255)
                     ->label('Зохиолч')
-                    ->default('админ'),
+                    ->default('Админ'),
     
             ])
             ->columns(1);

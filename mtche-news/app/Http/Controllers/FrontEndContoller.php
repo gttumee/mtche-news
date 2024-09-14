@@ -20,10 +20,8 @@ class FrontEndContoller extends Controller
 
     public function __construct()
     {
-        $this->articleMenu = ArticleCategory::all();
-        $this->highlightMenu = HighlightCategory::all();
-       
-        
+        $this->articleMenu = ArticleCategory::where('flag','1')->get();
+        $this->highlightMenu = HighlightCategory::where('flag','1')->get();
         View::share([
             'articleMenu' => $this->articleMenu,
             'highlightMenu' => $this->highlightMenu,

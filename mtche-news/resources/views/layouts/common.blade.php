@@ -37,7 +37,7 @@
 <body>
   @include('parts.header')
   @yield('content')
-  <section class="py-3 py-md-5 py-xl-10 bsb-section-py-xxl-1 bg-accent">
+  <section class="py-3 py-md-5 py-xl-10 bsb-section-py-xxl-1 bg-neutral">
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-12 col-md-9 col-lg-8 col-xl-8 col-xxl-7">
