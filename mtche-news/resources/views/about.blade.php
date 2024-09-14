@@ -29,7 +29,7 @@
             <div class="card bg-accent-subtle border-accent-subtle p-3 m-0">
               <div class="row gy-3 gy-md-0 align-items-md-center">
                 <div class="col-md-5">
-                  <img src="./assets/img/about/about-img-2.jpg" class="img-fluid rounded-start" alt="...">
+                  <img src="./assets/img/about/about-1.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-7">
                   <div class="card-body p-0">
@@ -44,7 +44,7 @@
             <div class="card bg-primary-subtle border-primary-subtle p-3 m-0">
               <div class="row gy-3 gy-md-0 align-items-md-center">
                 <div class="col-md-5">
-                  <img src="./assets/img/about/about-img-1.jpg" class="img-fluid rounded-start" alt="...">
+                  <img src="./assets/img/about/about-2.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-7">
                   <div class="card-body p-0">

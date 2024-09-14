@@ -11,6 +11,12 @@
   <meta name="description" content="MTCHE Media">
   <meta name="author" content="BootstrapBrain">
   <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta property="og:title" content="MTCHE Media">
+  <meta property="og:description" content="Та бүхэнд хамгийн сонирхолтой мэдээлэлийг түгээх болно.">
+  <meta property="og:image" content="https://example.com/path/to/your/image.jpg">
+  <meta property="og:url" content="https://media.mtche.jp">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MTCHE Media">
 
   <!-- Favicon and Touch Icons -->
   <link rel="icon" type="image/png" sizes="512x512" href="./assets/favicon/favicon-512x512.png">
