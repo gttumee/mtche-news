@@ -14,9 +14,9 @@
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="MTCHE Media">
-  <meta property="og:description" content="Та бүхэнд хамгийн сонирхолтой мэдээлэлийг түгээх болно.">
+  <meta property="og:description" content="最も興味深い情報を皆様と共有させていただきます。Та бүхэнд хамгийн сонирхолтой мэдээлэлийг түгээх болно.">
   <meta property="og:image" content="https://media.mtche.jp/assets/img/about/title.jpg">
-  <meta property="og:url" content="https://media.mtche.jp/article?id=17">
+  <meta property="og:url" content="https://media.mtche.jp">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="MTCHE Media">
 
