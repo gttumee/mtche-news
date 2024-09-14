@@ -10,7 +10,11 @@
           <div class="row">
             <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 d-flex gap-3">
               <p class="lead m-0">—</p>
-              <p class="lead text-secondary m-0">{{ __('page.about') }}</p>
+              <p class="lead text-secondary m-0">{{ __('page.about') }}
+                <br>
+                <a href="https://mtche.jp/" target="_blank"> {{ __('page.home_page') }}</a></p>
+              <p class="lead text-secondary m-0"></p>
+            </a>
             </div>
           </div>
         </div>
