@@ -103,6 +103,11 @@
             {!!$highlight->japanese!!}  
             @endif
             <img class="img-fluid mt-3 mb-5 rounded" loading="lazy" src="{{ asset('storage/' . $highlight->image) }}" alt="">
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="dQotufLO"></script>
+            <div class="fb-share-button" data-href="YOUR_PAGE_URL" data-layout="button" data-size="large">
+             <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=YOUR_PAGE_URL&src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+            </div>
           </div>
         </div>
       </div>
