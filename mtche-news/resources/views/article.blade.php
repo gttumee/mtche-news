@@ -1,5 +1,12 @@
 
 @extends('layouts.common')
+@if ($lang =='mn')
+@section('og_title', $article->title_mn)
+@else
+@section('og_title', $article->title_jp)
+@endif
+@section('og_image', url('storage/' . $article->image))
+@section('og_url', route('article',['id' => $article->id]))
 @section('content')
   <!-- Featured 1 - Bootstrap Brain Component -->
   <section class="py-3 py-md-5 py-xl-8 bg-light">
