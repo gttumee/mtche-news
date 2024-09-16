@@ -44,10 +44,16 @@
       </div>
       <div class="row justify-content-md-center">
         <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
-          <form class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
+          <form class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center" action="{{route('email')}}" method="post" enctype="multipart/form-data">
+              @csrf
             <div class="col-12 col-lg-8">
               <label for="email-newsletter-component" class="visually-hidden">{{ __('page.email') }}</label>
-              <input type="email" class="form-control bsb-form-control-3xl" id="email-newsletter-component" value="" placeholder="{{ __('page.email') }}" aria-label="email-newsletter-component" aria-describedby="email-newsletter-help" required>
+              <input type="email" class="form-control bsb-form-control-3xl" name="email" id="email-newsletter-component" value="" placeholder="{{ __('page.email') }}" aria-label="email-newsletter-component" aria-describedby="email-newsletter-help" required>
+              @if(session('message'))
+              <div class="alert alert-success">
+                  {{ session('message') }}
+              </div>
+            @endif
             </div>
             <div class="col-12 col-lg-3 text-center text-lg-start">
               <button type="submit" class="btn btn-primary bsb-btn-3xl">{{ __('menu.mail_register') }}</button>

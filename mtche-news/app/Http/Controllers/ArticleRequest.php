@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\ArticleCategory;
+use App\Models\Email;
 use App\Models\HighlightCategory;
 use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
@@ -57,4 +58,30 @@ class ArticleRequest extends Controller
         }
         return view('request', compact('lang'));
     }
+
+    public function email(Request $request)
+    {
+        $lang = App::getLocale(); 
+        $validated = $request->validate([
+            'email' => 'required|email'
+        ]);
+    
+        try {
+            Email::create([
+                'email' => $request->input('email')
+            ]);
+            $message = $lang === 'mn' ? 
+            'Таны и-мэйл хаяг амжилттай бүртгэгдлээ' : 
+            'メールアドレスが正常登録されました。';
+           
+            return back()->with('message', $message);
+        } catch (\Exception $e) {
+            $error = $lang === 'mn' ? 
+            'Таны и-мэйл хаягыг бүртгэхэд алдаа гарлаа дахин бүртгүүлэнэ үү' : 
+            'メールアドレスが登録する時エラー発生しました。';
+            return back()->with('error', $error);
+        }
+    }
+    
+    
 }

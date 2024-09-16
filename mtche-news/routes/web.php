@@ -43,3 +43,4 @@ Route::controller(FrontEndContoller::class)->group(function () {
 
 Route::get('/article-request', [ArticleRequest::class, 'index'])->name('article-request');
 Route::post('/article-request', [ArticleRequest::class, 'index'])->name('article-request');
+Route::post('/email', [ArticleRequest::class, 'email'])->name('email');
