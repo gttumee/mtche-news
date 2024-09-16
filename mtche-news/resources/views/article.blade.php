@@ -177,7 +177,7 @@
                     <p class="card-text mb-3">{{ __('menu.introduction') }}</p>
                     <ul class="bsb-social-media nav m-0">
                       <li class="nav-item">
-                        <a class="nav-link link-dark" href="#!">
+                        <a class="nav-link link-dark" href="https://www.facebook.com/profile.php?id=100092676005473" target="_blank">
                           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                             class="bi bi-facebook" viewBox="0 0 16 16">
                             <path
@@ -186,7 +186,7 @@
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link link-dark" href="#!">
+                        <a class="nav-link link-dark" href="https://x.com/Mtche0501" target="_blank">
                           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                             class="bi bi-twitter" viewBox="0 0 16 16">
                             <path

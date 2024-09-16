@@ -226,7 +226,7 @@
             <article>
               <div class="card border-0 bg-transparent">
                 <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-                  <a href={{route('article',['id' => $item->id])}}>
+                  <a href={{route('higthArticle',['id' => $item->id])}}>
                     <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy"
                     src="{{ asset('storage/' . $item->image) }}" alt="">
                   </a>
@@ -247,19 +247,19 @@
                       <li>
                         @if ($lang =='mn')
                         <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                        href={{route('article',['id' => $item->id])}}>{{$item->highligthCategory->name}}</a>  
+                        href={{route('higthArticle',['id' => $item->id])}}>{{$item->highligthCategory->name}}</a>  
                         @else
                         <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7"
-                        href={{route('article',['id' => $item->id])}}>{{$item->highligthCategory->japanese}}</a>
+                        href={{route('higthArticle',['id' => $item->id])}}>{{$item->highligthCategory->japanese}}</a>
                         @endif
                        
                       </li>
                     </ul>
                     <h2 class="card-title entry-title h4 m-0">
                       @if ($lang =='mn')
-                      <a class="link-dark text-decoration-none"  href={{route('article',['id' => $item->id])}}>{{$item->title_mn}}</a>
+                      <a class="link-dark text-decoration-none"  href={{route('higthArticle',['id' => $item->id])}}>{{$item->title_mn}}</a>
                       @else
-                      <a class="link-dark text-decoration-none" href={{route('article',['id' => $item->id])}}>{{$item->title_jp}}</a>
+                      <a class="link-dark text-decoration-none" href={{route('higthArticle',['id' => $item->id])}}>{{$item->title_jp}}</a>
                       @endif
                     </h2>
                   </div>

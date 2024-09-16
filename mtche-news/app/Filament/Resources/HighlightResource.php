@@ -38,9 +38,13 @@ class HighlightResource extends Resource
                     ->label('Нийтлэл Монгол'),
                     RichEditor::make('japanese')
                     ->label('Нийтлэл Япон'),
-                Forms\Components\FileUpload::make('image')
+                    Forms\Components\FileUpload::make('image')
                     ->image()
-                    ->label('Зураг'),
+                    ->label('Зураг')
+                    ->imageCropAspectRatio('1:1')
+                    ->imageResizeTargetWidth('800')
+                    ->imageResizeTargetHeight('600')
+                    ->imageEditor(),
                 Select::make('flag')
                     ->options([
                         '1' => 'Идвэхтэй',

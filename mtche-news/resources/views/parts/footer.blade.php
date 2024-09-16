@@ -35,7 +35,7 @@
           <div class="col-xs-12 col-sm-6 col-xl-3 order-1 order-xl-2">
             <ul class="nav justify-content-center justify-content-sm-end">
               <li class="nav-item">
-                <a class="nav-link link-dark px-3" href="#!">
+                <a class="nav-link link-dark px-3" href="https://www.facebook.com/profile.php?id=100092676005473" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-facebook" viewBox="0 0 16 16">
                     <path
@@ -44,7 +44,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-dark px-3" href="#!">
+                <a class="nav-link link-dark px-3" href="https://x.com/Mtche0501" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-twitter" viewBox="0 0 16 16">
                     <path
@@ -53,7 +53,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-dark px-3" href="#!">
+                <a class="nav-link link-dark px-3" href="https://www.youtube.com/@MTCHE/featured" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-youtube" viewBox="0 0 16 16">
                     <path
