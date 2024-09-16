@@ -5,7 +5,7 @@
 @else
 @section('og_title', $article->title_jp)
 @endif
-@section('og_description',  $article->title_jp)
+@section('og_description', $article->title_jp)
 @section('og_image', url('storage/' . $article->image))
 @section('og_url', route('article',['id' => $article->id]))
 @section('content')
