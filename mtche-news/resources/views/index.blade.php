@@ -204,12 +204,12 @@
         @endforeach
       </div>
     </div>
-    <div class="container">
+    {{-- <div class="container">
       <div class="row">
         <div class="col text-center">  
           <a href="#!" class="btn bsb-btn-2xl btn-primary rounded-pill mt-5 mt-xl-10">{{ __('menu.more_detail') }}</a>
         </div>
-      </div>
+      </div> --}}
     </div>
   </section>
 </main>

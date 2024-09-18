@@ -19,7 +19,7 @@
               @if ($lang == 'mn')
                   <p class="lead text-secondary m-0">{{$highlights[0]->highligthCategory->name}}-тухай нийтлэл</p>
               @else
-                  <p class="lead text-secondary m-0">{{$highlights[0]->highligthCategory->japanese}}ついての記事。</p>
+                  <p class="lead text-secondary m-0">{{$highlights[0]->highligthCategory->japanese}}についての記事。</p>
               @endif
           @else
               <p class="lead text-secondary m-0">Category information not available.</p>
@@ -133,13 +133,13 @@
           @endforeach
         </div>
       </div>
-      <div class="container">
+      {{-- <div class="container">
         <div class="row">
           <div class="col text-center">  
             <a href="#!" class="btn bsb-btn-2xl btn-primary rounded-pill mt-5 mt-xl-10">{{ __('menu.more_detail') }}</a>
           </div>
         </div>
-      </div>
+      </div> --}}
     </section> 
   </main>
 @endsection
