@@ -18,7 +18,7 @@
               @if ($lang == 'mn')
                   <p class="lead text-secondary m-0">{{$articles[0]->articleCategory->name}}-тухай нийтлэл</p>
               @else
-                  <p class="lead text-secondary m-0">{{$articles[0]->articleCategory->japanese}}ついての記事</p>
+                  <p class="lead text-secondary m-0">{{$articles[0]->articleCategory->japanese}}についての記事</p>
               @endif
             </div>
           </div>
