@@ -51,7 +51,7 @@ class ArticleRequest extends Controller
     
             $article = Article::create($articleData);
             $successMessage = $lang === 'mn' ? 
-            'Нийтлэл амжилттай илгээдлээ! Таны нийтлэлийг шалгаад нийтлэх болно, баярлалаа.' : 
+            'Нийтлэл амжилттай илгээгдлээ! Таны нийтлэлийг шалгаад нийтлэх болно, баярлалаа!' : 
             '記事が正常に送信されました！ご投稿いただいた記事は確認後、公開されます。ありがとうございます。';
             session()->flash('success', $successMessage);
 
