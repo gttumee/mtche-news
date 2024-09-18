@@ -64,11 +64,11 @@
             <!-- 言語選択トグル -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#!" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                言語/хэл
+                言語/Хэл
               </a>
               <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="languageDropdown">
-                <li><a class="dropdown-item" href="{{ route('lang.switch', 'mn') }}">{{ __('menu.mongolian') }}</a></li>
                 <li><a class="dropdown-item" href="{{ route('lang.switch', 'ja') }}">{{ __('menu.japanese') }}</a></li>
+                <li><a class="dropdown-item" href="{{ route('lang.switch', 'mn') }}">{{ __('menu.mongolian') }}</a></li>
               </ul>
             </li>
           </ul>
