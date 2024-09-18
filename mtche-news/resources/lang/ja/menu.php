@@ -20,7 +20,7 @@ return [
     'comment' => 'コメント',
     'short_date' => 'm/d/Y',
     'more_detail' => 'もっと見る',
-    'mail_get' => '電子メールで情報を取得する',
+    'mail_get' => 'メールアドレスを登録すると新着記事をメールで受け取ることができます。',
     'lang_read' => 'Монгол хэл',
     'mail_register' => '登録',
     'written_by' => '記事執筆者',
