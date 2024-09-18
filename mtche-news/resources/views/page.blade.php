@@ -16,9 +16,9 @@
             <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 d-flex gap-3">
               <p class="lead m-0">—</p>
               @if ($lang == 'mn')
-                  <p class="lead text-secondary m-0">Энэхүү булангаар хүний {{$articles[0]->articleCategory->name}} талаар дэлгэрэнгүй тайлбарлах</p>
+                  <p class="lead text-secondary m-0">{{$articles[0]->articleCategory->name}}-тухай нийтлэл</p>
               @else
-                  <p class="lead text-secondary m-0">本件については{{$articles[0]->articleCategory->japanese}}詳しく説明します。</p>
+                  <p class="lead text-secondary m-0">{{$articles[0]->articleCategory->japanese}}ついての記事</p>
               @endif
             </div>
           </div>

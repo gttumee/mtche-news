@@ -17,9 +17,9 @@
               <p class="lead m-0">—</p>
               @if (isset($highlights[0]) && $highlights[0]->highligthCategory)
               @if ($lang == 'mn')
-                  <p class="lead text-secondary m-0">Энэхүү булангаар хүний {{$highlights[0]->highligthCategory->name}} талаар дэлгэрэнгүй тайлбарлах</p>
+                  <p class="lead text-secondary m-0">{{$highlights[0]->highligthCategory->name}}-тухай нийтлэл</p>
               @else
-                  <p class="lead text-secondary m-0">本件については{{$highlights[0]->highligthCategory->japanese}}詳しく説明します。</p>
+                  <p class="lead text-secondary m-0">{{$highlights[0]->highligthCategory->japanese}}ついての記事。</p>
               @endif
           @else
               <p class="lead text-secondary m-0">Category information not available.</p>
