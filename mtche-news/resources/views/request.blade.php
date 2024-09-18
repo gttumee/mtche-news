@@ -32,7 +32,7 @@
           @endif
           <div class="col-12 col-lg-6">
             <div class="border overflow-hidden">
-              <form action="{{route('article-request')}}" method="post" enctype="multipart/form-data">
+              <form action="{{route('send-article')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                   <div class="col-12">

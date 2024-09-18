@@ -56,7 +56,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link {{ Request::routeIs('article-request') ? 'active' : '' }}" href={{route('article-request')}}>{{ __('menu.register') }}</a>
+              <a class="nav-link {{ Request::routeIs('send-article') ? 'active' : '' }}" href={{route('send-article')}}>{{ __('menu.register') }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link {{ Request::routeIs('contact') ? 'active' : '' }}" href={{route('contact')}}>{{ __('menu.contact') }}</a>

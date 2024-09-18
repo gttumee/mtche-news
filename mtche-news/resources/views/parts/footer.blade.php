@@ -24,7 +24,7 @@
                 <a class="nav-link link-secondary px-2 px-md-3" href={{route('about')}}>{{ __('menu.about') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-secondary px-2 px-md-3" href={{route('article-request')}}>{{ __('menu.register') }}</a>
+                <a class="nav-link link-secondary px-2 px-md-3" href={{route('send-article')}}>{{ __('menu.register') }}</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link link-secondary px-2 px-md-3" href={{route('contact')}}>{{ __('menu.contact') }}</a>

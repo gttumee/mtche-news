@@ -41,6 +41,6 @@ Route::controller(FrontEndContoller::class)->group(function () {
     Route::get('/request', 'comment')->name('comment');
 });
 
-Route::get('/article-request', [ArticleRequest::class, 'index'])->name('article-request');
-Route::post('/article-request', [ArticleRequest::class, 'index'])->name('article-request');
+Route::get('/send-article', [ArticleRequest::class, 'index'])->name('send-article');
+Route::post('/send-article', [ArticleRequest::class, 'index'])->name('send-article');
 Route::post('/email', [ArticleRequest::class, 'email'])->name('email');
