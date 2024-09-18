@@ -118,7 +118,7 @@ class FrontEndContoller extends Controller
         
                 $article = Contact::create($articleData);
                 $successMessage = $lang === 'mn' ? 
-                'Таны хүсэлтийг хүлээн авлаа эргэн холбоо барина' : 
+                'Таны хүсэлтийг хүлээн авлаа. Бид эргэн холбогдох болно' : 
                 'リクエストを受け取り次第、折り返しご連絡させていただきます。';
                 session()->flash('success', $successMessage);
     
