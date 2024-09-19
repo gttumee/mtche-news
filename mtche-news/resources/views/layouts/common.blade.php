@@ -39,7 +39,7 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-12 col-md-9 col-lg-8 col-xl-8 col-xxl-7">
-          <h2 class="display-5 fw-bold mb-4 mb-md-5 mb-xxl-6 text-center text-accent-emphasis">{{ __('menu.mail_get') }}</h2>
+          <h2 class="display-7 fw-bold mb-4 mb-md-5 mb-xxl-6 text-center text-accent-emphasis">{{ __('menu.mail_get') }}</h2>
         </div>
       </div>
       <div class="row justify-content-md-center">
