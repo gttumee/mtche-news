@@ -73,7 +73,7 @@ class FrontEndContoller extends Controller
         $lang = App::getLocale();
         $articles = Article::where('category_id', $id)
         ->where('flag','1')
-        ->orderBy('created_at', 'asc')
+        ->orderBy('created_at', 'desc')
         ->get();
         $articles->each(function ($article) {
             $article->comment_count = $article->comments()->count();
