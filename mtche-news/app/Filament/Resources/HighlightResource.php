@@ -44,7 +44,8 @@ class HighlightResource extends Resource
                     ->imageCropAspectRatio('1:1')
                     ->imageResizeTargetWidth('800')
                     ->imageResizeTargetHeight('600')
-                    ->imageEditor(),
+                    ->imageEditor()
+                    ->disk('public'),
                 Select::make('flag')
                     ->options([
                         '1' => 'Идвэхтэй',
