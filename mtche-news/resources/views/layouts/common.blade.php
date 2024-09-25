@@ -28,6 +28,7 @@
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="./assets/css/planet-bsb.css">
+  <link rel="stylesheet" href="./assets/css/custom.css">
 
   <!-- BSB Head -->
 </head>

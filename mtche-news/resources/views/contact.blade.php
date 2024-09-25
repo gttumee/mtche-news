@@ -137,7 +137,7 @@
                         <hr class="w-75 mb-3 border-dark-subtle">
                         <p class="mb-0">
                           <a class="link-secondary text-decoration-none"
-                            href="mailto:demo@yourdomain.com">news@mtche.jp</a>
+                            href="mailto:news@mtche.jp">news@mtche.jp</a>
                         </p>
                       </div>
                     </div>
