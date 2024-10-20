@@ -99,10 +99,12 @@
             {{$highlight->title_jp}}  
             @endif
             @if ($lang =='mn')
+            <div class="text-justify">
             {!!$highlight->article!!}
             @else
             {!!$highlight->japanese!!}  
             @endif
+            </div>
             <img class="img-fluid mt-3 mb-5 rounded" loading="lazy" src="{{ asset('storage/' . $highlight->image) }}" alt="">
             <div id="fb-root"></div>
             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="dQotufLO"></script>

@@ -88,36 +88,41 @@
 
     <!-- Entry Content Bootstrap Brain Component -->
     <section class="py-3 py-md-5 py-xl-10">
-      <div class="container">
-        <div class="row justify-content-md-center gy-3 gy-xl-4">
-          <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 gy-3 gy-xl-4 bsb-entry-content">
-            @if ($lang =='mn')
-            {{$article->title_mn}}  
-            @else
-            {{$article->title_jp}}  
-            @endif
-            @if ($lang =='mn')
+  <div class="container">
+    <div class="row justify-content-md-center gy-3 gy-xl-4">
+      <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 gy-3 gy-xl-4 bsb-entry-content">
+        @if ($lang =='mn')
+          {{$article->title_mn}}  
+        @else
+          {{$article->title_jp}}  
+        @endif
+        
+        <div class="text-justify">
+          @if ($lang =='mn')
             {!!$article->article!!}
-            @else
+          @else
             {!!$article->japanese!!}  
-            @endif
-            <img class="img-fluid mt-3 mb-5 rounded" loading="lazy" src="{{ asset('storage/' . $article->image) }}" alt="">
-                <div id="fb-root"></div>
-                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script>
-                <div class="fb-share-button" 
-                     data-href="{{ route('article', ['id' => $article->id]) }}" 
-                     data-layout="button_count" 
-                     data-size="large">
-                    <a target="_blank" 
-                       href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('article', ['id' => $article->id])) }}&src=sdkpreparse" 
-                       class="fb-xfbml-parse-ignore">
-                       Share
-                    </a>
-                </div>            
-          </div>
+          @endif
         </div>
+        
+        <img class="img-fluid mt-3 mb-5 rounded" loading="lazy" src="{{ asset('storage/' . $article->image) }}" alt="">
+        
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script>
+        <div class="fb-share-button" 
+             data-href="{{ route('article', ['id' => $article->id]) }}" 
+             data-layout="button_count" 
+             data-size="large">
+          <a target="_blank" 
+             href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('article', ['id' => $article->id])) }}&src=sdkpreparse" 
+             class="fb-xfbml-parse-ignore">
+            Share
+          </a>
+        </div>            
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 <!-- Comment Form -->
 <div class="pb-3 pb-md-5 pb-xl-10">
   <div class="container">
