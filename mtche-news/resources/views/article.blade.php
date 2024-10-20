@@ -103,7 +103,7 @@
             @endif
             <img class="img-fluid mt-3 mb-5 rounded" loading="lazy" src="{{ asset('storage/' . $article->image) }}" alt="">
                 <div id="fb-root"></div>
-                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="dQotufLO"></script>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script>
                 <div class="fb-share-button" 
                      data-href="{{ route('article', ['id' => $article->id]) }}" 
                      data-layout="button_count" 
