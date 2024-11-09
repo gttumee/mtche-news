@@ -90,6 +90,9 @@ class FrontEndContoller extends Controller
     ->where('id', $id)
     ->where('flag','1')
     ->first();
+    if ($article) {
+        $article->increment('views');
+    }
     $comments = Comment::where('article_id', $id)->get();
     $article->comment_count = $comments->count();
     $latestArticles = Article::with('articleCategory')
@@ -170,6 +173,9 @@ class FrontEndContoller extends Controller
         ->where('id', $id)
         ->where('flag','1')
         ->first();
+        if ($highlight) {
+            $highlight->increment('views');
+        }
         $comments = Comment::where('article_id', $id)
         ->where('commentable_type', 'highlight')
         ->get();

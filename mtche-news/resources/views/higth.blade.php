@@ -117,6 +117,15 @@
                     </li>
                     <li>
                       <span class="px-3">&bull;</span>
+                  </li>
+                  <li>
+                      <a class="link-secondary text-decoration-none d-flex align-items-center" href="#!">
+                          <i class="fa fa-eye"></i>
+                          <span class="ms-2 fs-7">{{ $item->views }}</span>
+                      </a>
+                  </li>        
+                    <li>
+                      <span class="px-3">&bull;</span>
                     </li>
                     <li>
                       @if ($lang =='mn')
