@@ -66,6 +66,9 @@ class HighlightResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('views')
+                    ->searchable()
+                    ->label('Үзсэн'),
                 Tables\Columns\TextColumn::make('highligthCategory.name')
                     ->searchable()
                     ->label('Төрөл'),
@@ -100,6 +103,7 @@ class HighlightResource extends Resource
                     ->searchable()
                     ->label('Зохиолч'),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

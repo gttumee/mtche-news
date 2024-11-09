@@ -72,6 +72,9 @@ class ArticleResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('views')
+                    ->searchable()
+                    ->label('Үзсэн'),
                 Tables\Columns\TextColumn::make('articleCategory.name')
                     ->searchable()
                     ->label('Төрөл'),
@@ -106,6 +109,7 @@ class ArticleResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
