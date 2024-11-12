@@ -85,11 +85,12 @@ class ArticleResource extends Resource
                     ->searchable()
                     ->label('Япон гарчиг'),
                 Tables\Columns\TextColumn::make('flag')
-                ->badge()
-                ->color(fn (string $state): string => match ($state) {
-                    '1' => 'success',
-                    '2' => 'warning',
-                })
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        '1' => 'success',
+                        '2' => 'warning',
+                        default => 'gray',  
+                    })
                 ->formatStateUsing(fn (string $state): string => match ($state) {
                     '1' => 'Нийтлэгдсэн',
                     '2' => 'Хүсэлт ирсэн', // 必要に応じて他の値のテキストも設定可能
