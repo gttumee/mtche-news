@@ -11,14 +11,14 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Filament\Panel;
 
-class User extends Authenticatable implements FilamentUser
+class User extends Authenticatable 
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    public function canAccessPanel(Panel $panel): bool
-    {
-        return str_ends_with($this->email, '@media.mtche.jp') && $this->hasVerifiedEmail();
-    }
+    // public function canAccessPanel(Panel $panel): bool
+    // {
+    //     return str_ends_with($this->email, '@media.mtche.jp') && $this->hasVerifiedEmail();
+    // }
 
     /**
      * The attributes that are mass assignable.
