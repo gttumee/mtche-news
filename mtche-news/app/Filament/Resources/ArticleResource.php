@@ -74,16 +74,20 @@ class ArticleResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('views')
                     ->searchable()
-                    ->label('Үзсэн'),
+                    ->label('Үзсэн')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('articleCategory.name')
                     ->searchable()
-                    ->label('Төрөл'),
+                    ->label('Төрөл')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('title_mn')
                     ->searchable()
-                    ->label('Монгол гарчиг'),
+                    ->label('Монгол гарчиг')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('title_jp')
                     ->searchable()
-                    ->label('Япон гарчиг'),
+                    ->label('Япон гарчиг')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('flag')
                     ->badge()
                     ->color(fn (string $state): string => match ($state) {
@@ -100,7 +104,8 @@ class ArticleResource extends Resource
                     ->label('Төлөв'),
                 Tables\Columns\TextColumn::make('writer')
                     ->searchable()
-                    ->label('Зохиолч'),
+                    ->label('Зохиолч')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

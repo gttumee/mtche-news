@@ -37,5 +37,5 @@ return [
     'send' => 'Илгээх',
     'address' => 'Хаяг',
     'phone_number' => '(+976) 78103347',
-    'company_address' => '3-14-7-301 Aratacho Kobe Shi Hyogo Ku Hyogo Ken 652-0032 Japan',
+    'company_address' => '1-1-401, Tamondori 4-chome Chuo Ward Kobe City Hyogo Prefecture Japan',
 ];
