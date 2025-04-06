@@ -18,6 +18,8 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Support\Enums\MaxWidth;
+use Swis\Filament\Backgrounds\FilamentBackgroundsPlugin;
+
 
 
 class AdminPanelProvider extends PanelProvider
@@ -57,6 +59,10 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->plugins([
+                FilamentBackgroundsPlugin::make()
+                ->showAttribution(false)
             ]);
     }
 }

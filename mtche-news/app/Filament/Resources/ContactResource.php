@@ -40,7 +40,7 @@ class ContactResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('message')
+                Forms\Components\Textarea::make('message')
                     ->required()
                     ->maxLength(255),
             ]);
@@ -51,24 +51,26 @@ class ContactResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Нэр'),
                 Tables\Columns\TextColumn::make('phone')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Утас'),
                 Tables\Columns\TextColumn::make('email')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('И-мэйл'),
                 Tables\Columns\TextColumn::make('message')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Мессэж')
+                    ->limit(20),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
+                    ->label('Он сар өдөр')
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->formatStateUsing(fn ($state) => \Carbon\Carbon::parse($state)->format('Y/m/d')),
+
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

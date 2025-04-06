@@ -74,10 +74,12 @@ class HighlightResource extends Resource
                     ->label('Төрөл'),
                 Tables\Columns\TextColumn::make('title_mn')
                     ->searchable()
-                    ->label('Монгол гарчиг'),
+                    ->label('Монгол гарчиг')
+                    ->limit(20),
                 Tables\Columns\TextColumn::make('title_jp')
                     ->searchable()
-                    ->label('Япон гарчиг'),
+                    ->label('Япон гарчиг')
+                    ->limit(20),
                 Tables\Columns\TextColumn::make('flag')
                 ->badge()
                 ->color(fn (string $state): string => match ($state) {

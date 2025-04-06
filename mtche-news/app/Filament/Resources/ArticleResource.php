@@ -83,10 +83,12 @@ class ArticleResource extends Resource
                 Tables\Columns\TextColumn::make('title_mn')
                     ->searchable()
                     ->label('Монгол гарчиг')
+                    ->limit(20)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('title_jp')
                     ->searchable()
                     ->label('Япон гарчиг')
+                    ->limit(20)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('flag')
                     ->badge()
@@ -97,8 +99,8 @@ class ArticleResource extends Resource
                     })
                 ->formatStateUsing(fn (string $state): string => match ($state) {
                     '1' => 'Нийтлэгдсэн',
-                    '2' => 'Хүсэлт ирсэн', // 必要に応じて他の値のテキストも設定可能
-                    default => $state, // デフォルトはそのままの値を表示
+                    '2' => 'Хүсэлт ирсэн',
+                    default => $state, 
                 })
                     ->searchable()
                     ->label('Төлөв'),
